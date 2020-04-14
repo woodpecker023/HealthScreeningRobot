@@ -270,7 +270,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">200,594.4 200,740 320,740</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Notification sequence" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <Sequence DisplayName="Notification sequence" sap:VirtualizedContainerService.HintSize="1232.8,4020.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -332,7 +332,7 @@
                                       <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                         <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
                                           <ui:FilterOperationArgument.Column>
-                                            <InArgument x:TypeArguments="x:String">["Your email"]</InArgument>
+                                            <InArgument x:TypeArguments="x:String">["Email adresa"]</InArgument>
                                           </ui:FilterOperationArgument.Column>
                                           <ui:FilterOperationArgument.Operand>
                                             <InArgument x:TypeArguments="x:String">[row("Email").ToString.ToLower]</InArgument>
@@ -675,7 +675,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">420,674.4 420,713.6</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Summary sequence" sap:VirtualizedContainerService.HintSize="425.6,895.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                          <Sequence DisplayName="Summary sequence" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

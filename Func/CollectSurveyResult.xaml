@@ -75,7 +75,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="433.6,490.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[in_ReportAdminURL]">
+    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" Hidden="True" sap:VirtualizedContainerService.HintSize="433.6,490.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[in_ReportAdminURL]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -87,7 +87,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -191,10 +191,10 @@
           </ActivityAction.Argument>
           <Assign DisplayName="Convert every email into lower case" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_4">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:Object">[row("Your email")]</OutArgument>
+              <OutArgument x:TypeArguments="x:Object">[row("Email adresa")]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[row("Your email").ToString.ToLower]</InArgument>
+              <InArgument x:TypeArguments="x:Object">[row("Email adresa").ToString.ToLower]</InArgument>
             </Assign.Value>
           </Assign>
         </ActivityAction>
@@ -208,10 +208,10 @@
           </ActivityAction.Argument>
           <Assign DisplayName="Parse the Body temperture into Double" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_5">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:Object">[row("Please enter your temperature recorded")]</OutArgument>
+              <OutArgument x:TypeArguments="x:Object">[row("Molimo vas da unesete vašu trenutnu temperaturu")]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:Double">[Double.Parse(row("Please enter your temperature recorded").ToString)]</InArgument>
+              <InArgument x:TypeArguments="x:Double">[Double.Parse(row("Molimo vas da unesete vašu trenutnu temperaturu").ToString)]</InArgument>
             </Assign.Value>
           </Assign>
         </ActivityAction>

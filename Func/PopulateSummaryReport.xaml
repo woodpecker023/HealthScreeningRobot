@@ -86,7 +86,7 @@
               <OutArgument x:TypeArguments="x:String">[workFromHomeCount]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_DT.select("[Work arrangement]='Work from home'").Length.ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_DT.select("[Raspored rada]='Rad od kuće'").Length.ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -94,7 +94,7 @@
               <OutArgument x:TypeArguments="x:String">[customerSiteCount]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_DT.select("[Work arrangement]='Customer site'").Length.ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_DT.select("[Raspored rada]='Rad kod korisnika'").Length.ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -102,7 +102,7 @@
               <OutArgument x:TypeArguments="x:String">[workFromOfficeCount]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_DT.select("[Work arrangement]='Work from office'").Length.ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_DT.select("[Raspored rada]='Rad iz kancelarije'").Length.ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -110,7 +110,7 @@
               <OutArgument x:TypeArguments="x:String">[othersCount]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_DT.select("[Work arrangement]='Others'").Length.ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_DT.select("[Raspored rada]='Other'").Length.ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -118,7 +118,7 @@
               <OutArgument x:TypeArguments="x:String">[numOfRespondant]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_DT.DefaultView.ToTable(true, "Your Email").Rows.Count.ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_DT.DefaultView.ToTable(true, "Email adresa").Rows.Count.ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
@@ -126,7 +126,7 @@
               <OutArgument x:TypeArguments="x:String">[numOfNonrespondant]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">["="+in_totalNumOfEmployee.ToString+"-"+in_DT.DefaultView.ToTable(true, "Your Email").Rows.Count.ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">["="+in_totalNumOfEmployee.ToString+"-"+in_DT.DefaultView.ToTable(true, "Email adresa").Rows.Count.ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -134,7 +134,7 @@
               <OutArgument x:TypeArguments="x:String">[numAbnormalBodyTemperture]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_DT.select("[Please enter your temperature recorded]&gt;37").Length.ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_DT.select("[Molimo vas da unesete vašu trenutnu temperaturu]&gt;37").Length.ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
